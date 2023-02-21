@@ -87,3 +87,12 @@ Take things step by step, talk about who would be best suited for that portion o
 - [Click Here](https://docs.google.com/presentation/d/1LlU1QiCZqri8hFVDFD7m1koe54xN-isuHHrW3U2RWEw/edit?usp=sharing)
 
 ### [Software Requirements](https://github.com/Team-DAIR/JAT---Job-Application-Tracker/blob/main/reqirements.md)
+
+### Wireframes
+![Wireframes](https://user-images.githubusercontent.com/107962287/220230774-060816e0-6423-494a-9b16-f0ad578ba18c.png)
+
+### Domain Model
+![Domain Model](https://user-images.githubusercontent.com/107962287/220231662-c1cb42c0-4a49-44a1-be0d-88b46de05164.png)
+
+### Database Schema Diagram
+![Database Schema Diagram](https://user-images.githubusercontent.com/107962287/220231502-091987f1-5266-416f-b1fb-351c8d907654.png)
