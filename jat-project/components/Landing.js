@@ -6,7 +6,7 @@ import ApplicationForm from './FormPage';
 
 export default function Landing() {
 
-    
+
     return (
         <div>
             <Head>
@@ -16,8 +16,15 @@ export default function Landing() {
                 <meta httpEquiv='X-UA-Compatible' content='ie=edge' />
                 <link ref="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
             </Head>
-            
+            <Header />
+
             <ApplicationForm />
+
+            <article>Testimony 1</article>
+            <article>Testimony 2</article>
+            <article>Testimony 3</article>
+            <article>Testimony 4</article>
+
             <div>
                 {props.children}
             </div>

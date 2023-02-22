@@ -7,6 +7,7 @@ import Footer from '../components/Footer.js';
 import LoginForm from '../components/LoginForm';
 // import CookieStandAdmin from '../components/StandAdmin';
 import { useAuth } from '../contexts/auth';
+import Landing from '@/components/Landing';
 
 export default function Home() {
 
@@ -21,7 +22,7 @@ export default function Home() {
               <title>Job Application Tracker</title>
               </Head>
             {user ?
-                <LoginForm />
+                <Landing />
                 :
                 <LoginForm onLogin={login} />
             }
