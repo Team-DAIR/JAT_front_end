@@ -2,12 +2,11 @@ import Head from 'next/head';
 import { useState } from 'react';
 import Header from '../components/Header';
 import ApplicationForm from '../components/FormPage';
-// import ReportTable from '../components/ReportTable';
 import Footer from '../components/Footer.js';
 import LoginForm from '../components/LoginForm';
-// import CookieStandAdmin from '../components/StandAdmin';
 import { useAuth } from '../contexts/auth';
 import Landing from '@/components/Landing';
+import Dashboard from '@/components/Dashboard';
 
 export default function Home() {
 
@@ -22,7 +21,7 @@ export default function Home() {
               <title>Job Application Tracker</title>
               </Head>
             {user ?
-                <Landing />
+                <Dashboard />
                 :
                 <LoginForm onLogin={login} />
             }
