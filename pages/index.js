@@ -1,11 +1,12 @@
 import Head from 'next/head';
 import { useState } from 'react';
 import Header from '../components/Header';
-import Landing from '../components/Landing';
-import FormPage from '../components/FormPage';
+import ApplicationForm from '../components/FormPage';
+import Footer from '../components/Footer.js';
+import LoginForm from '../components/LoginForm';
 import { useAuth } from '../contexts/auth';
-
-
+import Landing from '@/components/Landing';
+import Dashboard from '@/components/Dashboard';
 
 export default function Home() {
 
@@ -13,23 +14,19 @@ export default function Home() {
 
   return (
     <>
-      {/* <div
-        className="bg-scroll bg-no-repeat bg-cover"
-        style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1612198790700-0ff08cb726e5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDF8fGNvb2tpZSUyMHN0YWNrfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60')`,
-          height: "1000px",
-        }}
-      > */}
+      <div
+        className='bg-gradient-to-b from-stone-100 to-gray-200'
+      >
         <Head>
               <title>Job Application Tracker</title>
               </Head>
             {user ?
-                <FormPage />
+                <Dashboard />
                 :
-                <Landing />
+                <LoginForm onLogin={login} />
             }
 
-      {/* </div> */}
+      </div>
     </>
   )
 }
