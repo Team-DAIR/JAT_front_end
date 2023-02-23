@@ -18,7 +18,7 @@ export default function Landing() {
       <h2 className="p-2 font-mono text-center border-black bg-black text-white tracking-wider"> Testimonials</h2>
 
       <div className="min-h-screen bg-blue-900 py-6 flex flex-col justify-center sm:py-12">
-        <div class="py-3 sm:max-w-xl sm:mx-auto w-full px-2 sm:px-0">
+        <div className="py-3 sm:max-w-xl sm:mx-auto w-full px-2 sm:px-0">
 
           <div className="relative text-gray-700 antialiased text-sm font-semibold">
 
