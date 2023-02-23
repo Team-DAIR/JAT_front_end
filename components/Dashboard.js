@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Doughnut from "./Doughnut"
 import Footer from "./Footer"
 import JobList from "./JobList"
 import NavBar from "./NavBar"
@@ -26,11 +27,18 @@ export default function Dashboard() {
             width: "100%",
           }}
         >
+          <h1 className='flex p-4 bg-black text-white font-mono mb-32'> DASHBOARD</h1>
           <JobList />
+
 
         </div>
       </header>
-      <h1> DASHBOARD GOES HERE </h1>
+      <div className='w-500px m-auto flex '>
+        <Doughnut
+        className=''
+          options={{ maintainAspectRatio: false }} />
+      </div>
+
       <Footer />
     </>
   )
