@@ -1,16 +1,13 @@
 // HARDCODE HEADER!
 
 import Head from 'next/head';
-import Header from './Header';
-import ApplicationForm from './FormPage';
-
-export default function Landing() {
+export default function About(props) {
 
 
   return (
     <div>
       <Head>
-        <title>{props.pageTitle}</title>
+        <title>About</title>
         <meta charSet='UFT-8' />
         <meta name='viewport' content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv='X-UA-Compatible' content='ie=edge' />
@@ -35,13 +32,13 @@ export default function Landing() {
                     <a href="/" class="text-gray-900 dark:text-white hover:underline" aria-current="page">Home</a>
                   </li>
                   <li>
-                    <a href="#" class="text-gray-900 dark:text-white hover:underline">Form</a>
+                    <a href="/" class="text-gray-900 dark:text-white hover:underline">Form</a>
                   </li>
                   <li>
-                    <a href="#" class="text-gray-900 dark:text-white hover:underline">Dashboard</a>
+                    <a href="/" class="text-gray-900 dark:text-white hover:underline">Dashboard</a>
                   </li>
                   <li>
-                    <a href="#" class="text-gray-900 dark:text-white hover:underline">About Us</a>
+                    <a href="/" class="text-gray-900 dark:text-white hover:underline">About Us</a>
                   </li>
                 </ul>
               </div>
