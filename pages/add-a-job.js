@@ -1,5 +1,6 @@
 import Head from "next/head";
-import FormPage from "@/components/FormPage"; import React from "react";
+import AddJobForm from "@/components/AddJobForm";
+import React from "react";
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
 import Header from "@/components/Header";
@@ -24,12 +25,12 @@ export default function AddaJobPage() {
                 <title>
                     Add A Job Page
                 </title>
-                <link rel="icon" href="/favicon.ico" />
+                {/* <link rel="icon" href="/favicon.ico" /> */}
             </Head>
             <main className="min-h-screen flex flex-col justify-center">
                 <Navbar/>
 
-                <FormPage />
+                <AddJobForm />
                 <App />
 
             </main>

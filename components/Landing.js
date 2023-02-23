@@ -2,7 +2,7 @@
 
 import Head from 'next/head';
 import Header from './Header';
-import ApplicationForm from './FormPage';
+import ApplicationForm from './AddJobForm';
 
 export default function Landing() {
 

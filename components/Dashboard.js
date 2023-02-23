@@ -1,4 +1,4 @@
-import ApplicationForm from "./FormPage"
+import ApplicationForm from "./AddJobForm"
 import Navbar from "./Nav"
 import Footer from "./Footer"
 

@@ -1,12 +1,13 @@
 import Head from 'next/head';
 import { useState } from 'react';
 import Header from '../components/Header';
-import ApplicationForm from '../components/FormPage';
+import ApplicationForm from '../components/AddJobForm';
 import Footer from '../components/Footer.js';
 import LoginForm from '../components/LoginForm';
 import { useAuth } from '../contexts/auth';
 import Landing from '@/components/Landing';
 import Dashboard from '@/components/Dashboard';
+import AddaJobPage from './add-a-job';
 
 export default function Home() {
 
@@ -21,7 +22,7 @@ export default function Home() {
               <title>Job Application Tracker</title>
               </Head>
             {user ?
-                <Dashboard />
+                <AddaJobPage />
                 :
                 <LoginForm onLogin={login} />
             }
