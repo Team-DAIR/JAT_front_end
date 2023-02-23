@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Footer from "./Footer"
+import JobList from "./JobList"
 import NavBar from "./NavBar"
 
 export default function Dashboard() {
@@ -25,7 +26,7 @@ export default function Dashboard() {
             width: "100%",
           }}
         >
-
+          <JobList />
 
         </div>
       </header>
