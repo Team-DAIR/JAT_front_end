@@ -12,7 +12,7 @@ export default function LoginForm({ onLogin }) {
             <form onSubmit={handleSubmit}>
                 <fieldset className="border m-16 border-gray-700 bg-stone-400 p-6" autoComplete='off'>
                     {/* <legend className='flex rounded-full p-4 bg-zinc-500 text-gray-800 font-medium text-2xl font-serif m-32'></legend> */}
-                    <label className="p-1" htmlFor="username">Username: </label>
+                    <label className="p-1 ml-72" htmlFor="username">Username: </label>
                     <input name="username" />
                     <label className="p-1" htmlFor="password">Password: </label>
                     <input type="password" name="password" />

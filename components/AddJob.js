@@ -5,7 +5,7 @@ import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
 
 const Video = () => (
-  <div>
+  <div className="max-w-xl p-4 place-self-center">
       <LiteYouTubeEmbed
           id="KObiuTFYTkM"
           activeClass="lyt-activated" // Default as "lyt-activated", gives control to wrapper once clicked

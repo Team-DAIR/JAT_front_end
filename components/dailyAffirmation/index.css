@@ -1,20 +1,21 @@
 @import '~antd/dist/antd.css';
 
-.site-logo {
+/* .site-logo {
   color: #fff;
   font-size: 2rem;
-}
+} */
 
 main {
   margin: 2rem auto;
   padding: 1rem;
-  background-color: #fff;
+  background-color: #e5e7eb;
   border-radius: 2px;
+  justify-content: center;
 }
 
 .container {
   background: none;
-  width: 100%;
+  width: 25%;
   max-width: 1024px;
   margin: 0 auto;
 }
