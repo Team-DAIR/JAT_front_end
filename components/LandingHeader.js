@@ -1,5 +1,5 @@
 
-export default function Header() {
+export default function LandingHeader() {
   return (
     <>
       <header className='flex p-4 bg-black text-white font-mono text-2xl font-medium mb-32'>
@@ -13,11 +13,8 @@ export default function Header() {
         >
           <h1 className="p-32 text-center text-3xl font-normal tracking-wider"><b className="text-5xl">J</b>ob <b className="text-5xl">A</b>pplication <b className="text-5xl">T</b>racker</h1>
           <p className="text-center italic text-2xl font-serif tracking-wider">"Just JAT it down!"</p>
-
         </div>
       </header>
-
-
     </>
   )
 }
