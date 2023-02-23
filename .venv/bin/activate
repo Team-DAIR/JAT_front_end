@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/aubreycorsetti/projects/courses/401/JAT_front_end/.venv"
+VIRTUAL_ENV="/Users/ianshirley/codeFellows/401/JAT_front_end/.venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

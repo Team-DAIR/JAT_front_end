@@ -32,6 +32,8 @@ export function AuthProvider(props) {
             headers: {'Content-Type': 'application/json'},
         };
 
+        console.log(tokenUrl)
+
         const response = await fetch(tokenUrl, options);
 
         const data = await response.json();
