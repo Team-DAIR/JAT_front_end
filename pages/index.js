@@ -9,21 +9,16 @@ export default function Home() {
   const { user, login } = useAuth();
 
   return (
-    <>
-      <div className='bg-gradient-to-b from-stone-100 to-gray-200'>
-
-        <Head>
-          <title>Job Application Tracker</title>
-        </Head>
-
-        {user ?
-          <AddJob />
-          :
-          <Landing onLogin={login} />
-        }
-
-      </div>
+    <div className='relative min-h-screen'>
+      <Head>
+        <title>Job Application Tracker</title>
+      </Head>
+      {user ?
+        <AddJob />
+        :
+        <Landing onLogin={login} />
+      }
       <Footer />
-    </>
+    </div>
   )
 }

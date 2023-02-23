@@ -24,7 +24,7 @@ export default function JobList() {
   ];
   
   return (
-    <div className='flex flex-col justify-center items-center md:mt-32 md:mx-60 p-10 rounded-xl h-auto py-20 bg-gray-50'>
+    <div className='flex m-auto flex-col justify-center items-center m-auto p-10 rounded-xl h-auto py-20 bg-slate-200 w-5/6' >
       {
         info.map((info) => {
           return (

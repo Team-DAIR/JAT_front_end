@@ -25,8 +25,7 @@ const data = {
 };
 
 export default () => (
-    <div>
-        <h2>Doughnut Example</h2>
+    <div className='flex w-1/3 mt-2'>
         <Doughnut
             data={data}
             max-width={100}
