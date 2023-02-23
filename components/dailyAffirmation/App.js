@@ -1,0 +1,104 @@
+import React, { useState } from 'react'
+import { Layout, Button, List } from 'antd'
+import {
+  MDBCard,
+  MDBCardBody,
+  MDBCardTitle,
+  MDBCardText,
+  MDBBtn
+} from 'mdb-react-ui-kit';
+
+
+const config = {
+  apiUrl: 'https://type.fit/api/quotes',
+  // repoUrl: 'https://github.com/ssokurenko/quotes-react-app'
+}
+
+const { Header, Content } = Layout
+
+function App() {
+  const [quotes, setQuotes] = useState([])
+  const [isLoading, setIsLoading] = useState(false)
+  const Quote = ({ text, author }) => {
+    return (
+      <span>
+        <strong>{text}</strong> &nbsp; <span>{author}</span>
+      </span>
+    )
+  }
+
+  const getQuotes = () => {
+    setQuotes([])
+    setIsLoading(true)
+    fetch(config.apiUrl)
+      .then(function (response) {
+        return response.json()
+      })
+      .then((data) => {
+        setQuotes(data)
+        setIsLoading(false)
+      })
+      .catch(() => {
+        setIsLoading(false)
+      })
+  }
+  console.log(quotes);
+  return (
+    <Layout>
+      <Content className="container">
+        <List
+          size="small"
+          loading={isLoading}
+          header={
+            <Button className='bg-black content-center'
+              onClick={() => getQuotes()}
+              type="primary"
+              disabled={isLoading}
+              size="large"
+              color='black'>
+              Daily Motivation!
+            </Button>
+          }
+          bordered
+          dataSource={quotes}
+          renderItem={(quote) => (
+            <MDBCard>
+            <MDBCardBody>
+              <MDBCardTitle>Card title</MDBCardTitle>
+              <MDBCardText>
+                <Quote text={quote.text} author={quote.author} />
+              </MDBCardText>
+              <MDBBtn>Button</MDBBtn>
+            </MDBCardBody>
+          </MDBCard>
+          )}
+        />
+      </Content>
+    </Layout>
+  )
+}
+
+// import React from 'react';
+// import {
+//   MDBCard,
+//   MDBCardBody,
+//   MDBCardTitle,
+//   MDBCardText,
+//   MDBBtn
+// } from 'mdb-react-ui-kit';
+
+// export default function App() {
+//   return (
+//     <MDBCard>
+//       <MDBCardBody>
+//         <MDBCardTitle>Card title</MDBCardTitle>
+//         <MDBCardText>
+//           <Quote text={quote.text} author={quote.author} />
+//         </MDBCardText>
+//         <MDBBtn>Button</MDBBtn>
+//       </MDBCardBody>
+//     </MDBCard>
+//   );
+// }
+
+export default App
