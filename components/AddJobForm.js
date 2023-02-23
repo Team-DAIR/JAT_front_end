@@ -28,7 +28,7 @@ export default function CreateApplicationForm() {
             job_title: event.target.job_title.value,
             date_applied: parsedDate,
             notes: event.target.notes.value,
-            method_of_application: event.target.method_of_application.value,
+            method_of_applications: event.target.method_of_applications.value,
             referrals: event.target.referrals.value,
             first: false,
             second: false,
@@ -37,7 +37,6 @@ export default function CreateApplicationForm() {
             offer: false,
             owner: user.id,
         };
-        console.log(info)
         createResource(info);
 
     }
@@ -59,8 +58,8 @@ export default function CreateApplicationForm() {
                 <label htmlFor='notes' className='inline-grid content-center text-white mx-4 my-2'>Notes</label>
                 <input type='text' name='notes' id='notes' className='content-center mx-2 my-2 w-6/12' placeholder='Optional' />
 
-                <label htmlFor='method_of_application' className='inline-grid content-center text-white mx-4 my-2'>How Did You Apply?</label>
-                <select name='method_of_application' id='method_of_application' className='content-center mx-2 my-2 w-6/12'>
+                <label htmlFor='method_of_applications' className='inline-grid content-center text-white mx-4 my-2'>How Did You Apply?</label>
+                <select name='method_of_applications' id='method_of_applications' className='content-center mx-2 my-2 w-6/12'>
                     {/* <option selected value='choose'>Choose a method</option> */}
                     <option value="linkedin">LinkedIn</option>
                     <option value="indeed">Indeed</option>
