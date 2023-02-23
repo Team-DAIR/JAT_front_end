@@ -14,6 +14,10 @@ const config = {
   // repoUrl: 'https://github.com/ssokurenko/quotes-react-app'
 }
 
+
+
+
+
 const { Header, Content } = Layout
 
 function App() {
@@ -25,6 +29,10 @@ function App() {
         <strong>{text}</strong> &nbsp; <span>{author}</span>
       </span>
     )
+  }
+  
+  function getRandomInt() {
+    return Math.floor(Math.random() * quotes.length);
   }
 
   const getQuotes = () => {
@@ -43,6 +51,7 @@ function App() {
       })
   }
   console.log(quotes);
+  let indexOfQuote = getRandomInt();
   return (
     <Layout>
       <Content className="container">
@@ -66,7 +75,7 @@ function App() {
             <MDBCardBody>
               <MDBCardTitle>Card title</MDBCardTitle>
               <MDBCardText>
-                <Quote text={quote.text} author={quote.author} />
+                <Quote text={quotes.text} author={quotes.author} />
               </MDBCardText>
               <MDBBtn>Button</MDBBtn>
             </MDBCardBody>

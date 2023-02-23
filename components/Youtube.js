@@ -1,27 +1,15 @@
 import React from "react";
-import YouTube from "react-youtube";
+import { render } from "react-dom";
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
 
-export default class YoutubeVideo
-extends React.Component {
-render() {
-	const opts = {
-	height: "390",
-	width: "640",
-	playerVars: {
-		autoplay: 1,
-	},
-	};
-
-	return (
+const App = () => (
 	<div>
-		<h3>How to find Software Engineering job openings</h3>
-		<YouTube videoId="KObiuTFYTkM"
-			opts={opts} onReady={this._onReady} />
+		<LiteYouTubeEmbed
+			id="L2vS_050c-M"
+			title="What’s new in Material Design for the web (Chrome Dev Summit 2019)"
+		/>
 	</div>
-	);
-}
+);
 
-_onReady(event) {
-	event.target.pauseVideo();
-}
-}
+render(<App />, document.getElementById("root"));

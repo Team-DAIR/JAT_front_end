@@ -44,24 +44,24 @@ export default function Navbar () {
       >
         <div className='lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto'>
           <Link
-            href='/Dashboard'
+            href='/dashboard'
             className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-green-600 hover:text-white '>
             
               Dashboard
             
           </Link>
           <Link
-            href='/Form'
+            href='/add-a-job'
             className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-green-600 hover:text-white'>
             
-              Form
+              Add A Job
             
           </Link>
           <Link
-            href='/About'
+            href='/about'
             className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-green-600 hover:text-white'>
             
-              About us
+              About Us
             
           </Link>
         </div>
