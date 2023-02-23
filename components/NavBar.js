@@ -1,6 +1,11 @@
 import Link from 'next/link';
+import { useAuth } from '@/contexts/auth';
+import { useRouter } from 'next/router';
 
-export default function NavBar({ logout }) {
+export default function NavBar() {
+
+  const { logout } = useAuth();
+  const router = useRouter()
 
   return (
     <nav className='top-0 w-screen flex items-center flex-wrap bg-blue-900 p-3 '>
