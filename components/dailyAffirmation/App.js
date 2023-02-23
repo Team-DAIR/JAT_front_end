@@ -29,7 +29,7 @@ export default function Affirmation() {
   }
 
   function getRandomInt() {
-    return Math.floor(Math.random() * quotes.length);
+    return Math.floor(Math.random() * 1634);
   }
 
   const getQuotes = () => {
@@ -40,15 +40,14 @@ export default function Affirmation() {
         return response.json()
       })
       .then((data) => {
-        setQuotes(data)
+        setQuotes([data[getRandomInt()]])
         setIsLoading(false)
       })
       .catch(() => {
         setIsLoading(false)
       })
   }
-  console.log(quotes);
-  let indexOfQuote = getRandomInt();
+
   return (
     <Layout>
       <Content className="container">
@@ -67,14 +66,13 @@ export default function Affirmation() {
           }
           bordered
           dataSource={quotes}
-          renderItem={(quote) => (
-            <MDBCard>
+          // quoteArray={[quote]}
+          renderItem={(setQuotes) => (
+            <MDBCard className='flex w-2/5 text-center'>
               <MDBCardBody>
-                <MDBCardTitle>Card title</MDBCardTitle>
                 <MDBCardText>
-                  <Quote text={quotes.text} author={quotes.author} />
+                  <Quote text={setQuotes.text} author={setQuotes.author} />
                 </MDBCardText>
-                <MDBBtn>Button</MDBBtn>
               </MDBCardBody>
             </MDBCard>
           )}
