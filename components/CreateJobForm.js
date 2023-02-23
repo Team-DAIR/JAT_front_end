@@ -5,14 +5,13 @@ import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import { useRouter } from 'next/router';
 
-export default function CreateApplicationForm() {
+export default function CreateJobForm() {
 
     const { user } = useAuth();
     const { createResource } = useResource();
     const [startDate, setStartDate] = useState(new Date());
 
     const router = useRouter()
-    const [route, setRoute] = useState()
 
     function handleSubmit(event) {
         event.preventDefault();

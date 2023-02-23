@@ -14,13 +14,10 @@ const config = {
   // repoUrl: 'https://github.com/ssokurenko/quotes-react-app'
 }
 
-
-
-
-
 const { Header, Content } = Layout
 
-function App() {
+
+export default function Affirmation() {
   const [quotes, setQuotes] = useState([])
   const [isLoading, setIsLoading] = useState(false)
   const Quote = ({ text, author }) => {
@@ -30,7 +27,7 @@ function App() {
       </span>
     )
   }
-  
+
   function getRandomInt() {
     return Math.floor(Math.random() * quotes.length);
   }
@@ -72,42 +69,17 @@ function App() {
           dataSource={quotes}
           renderItem={(quote) => (
             <MDBCard>
-            <MDBCardBody>
-              <MDBCardTitle>Card title</MDBCardTitle>
-              <MDBCardText>
-                <Quote text={quotes.text} author={quotes.author} />
-              </MDBCardText>
-              <MDBBtn>Button</MDBBtn>
-            </MDBCardBody>
-          </MDBCard>
+              <MDBCardBody>
+                <MDBCardTitle>Card title</MDBCardTitle>
+                <MDBCardText>
+                  <Quote text={quotes.text} author={quotes.author} />
+                </MDBCardText>
+                <MDBBtn>Button</MDBBtn>
+              </MDBCardBody>
+            </MDBCard>
           )}
         />
       </Content>
     </Layout>
   )
 }
-
-// import React from 'react';
-// import {
-//   MDBCard,
-//   MDBCardBody,
-//   MDBCardTitle,
-//   MDBCardText,
-//   MDBBtn
-// } from 'mdb-react-ui-kit';
-
-// export default function App() {
-//   return (
-//     <MDBCard>
-//       <MDBCardBody>
-//         <MDBCardTitle>Card title</MDBCardTitle>
-//         <MDBCardText>
-//           <Quote text={quote.text} author={quote.author} />
-//         </MDBCardText>
-//         <MDBBtn>Button</MDBBtn>
-//       </MDBCardBody>
-//     </MDBCard>
-//   );
-// }
-
-export default App
