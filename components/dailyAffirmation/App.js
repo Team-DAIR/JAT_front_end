@@ -1,20 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Layout, Button, List } from 'antd'
 import {
   MDBCard,
   MDBCardBody,
-  MDBCardTitle,
   MDBCardText,
-  MDBBtn
 } from 'mdb-react-ui-kit';
+
 
 
 const config = {
   apiUrl: 'https://type.fit/api/quotes',
-  // repoUrl: 'https://github.com/ssokurenko/quotes-react-app'
 }
 
-const { Header, Content } = Layout
+const { Content } = Layout
 
 
 export default function Affirmation() {
@@ -47,15 +45,16 @@ export default function Affirmation() {
         setIsLoading(false)
       })
   }
+  useEffect(getQuotes, [])
 
   return (
-    <Layout>
-      <Content className="container">
+    <Layout className='bg-transparent place-items-center'>
+      <Content className="container m-8 w-80">
         <List
           size="small"
           loading={isLoading}
           header={
-            <Button className='bg-black content-center'
+            <Button className='bg-black place-items-center font-mono ml-10 mr-10'
               onClick={() => getQuotes()}
               type="primary"
               disabled={isLoading}
@@ -66,12 +65,11 @@ export default function Affirmation() {
           }
           bordered
           dataSource={quotes}
-          // quoteArray={[quote]}
           renderItem={(setQuotes) => (
-            <MDBCard className='flex w-2/5 text-center'>
+            <MDBCard className='flex w-2/5 text-center leading-loose text-lg'>
               <MDBCardBody>
-                <MDBCardText>
-                  <Quote text={setQuotes.text} author={setQuotes.author} />
+                <MDBCardText className='w-80 p-3'>
+                  <Quote text={setQuotes.text} author={setQuotes.author}/>
                 </MDBCardText>
               </MDBCardBody>
             </MDBCard>

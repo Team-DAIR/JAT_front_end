@@ -2,7 +2,7 @@
 export default function LandingHeader() {
   return (
     <>
-      <header className='flex p-4 bg-black text-white font-mono text-2xl font-medium mb-32'>
+      <header className='flex p-4 bg-black text-white font-mono text-2xl font-medium mb-8'>
         <div
           className=" bg-no-repeat bg-cover"
           style={{
