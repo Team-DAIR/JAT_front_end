@@ -33,6 +33,7 @@ export default function AddJob() {
                 <NavBar />
       <CreateJobForm />
       </div>
+      <h1 className="text-white text-center pt-14 text-xl font-mono italic">Need help? Watch this video for some tips on landing your dream job!</h1>
       <Video />
         </div>        
     </>

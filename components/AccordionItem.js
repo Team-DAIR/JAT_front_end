@@ -29,7 +29,7 @@ export default function AccordionItem({ title, date_applied, notes, method_of_ap
                 </div>
               )
           }
-        </div>
+        </div> 
       </div>
       {Index === Id && (
         <div className=" w-2/3 bg-slate-100 rounded-md border-solid border-2 border-slate-500 mt-2">
