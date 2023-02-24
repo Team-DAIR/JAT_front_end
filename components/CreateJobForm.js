@@ -46,24 +46,19 @@ export default function CreateJobForm() {
                 <form className="flex w-6/12 p-6 mx-auto my-16 bg-blue-800/50 border border-blue-900 h-3/4 place-contents-center" onSubmit={handleSubmit}>
                     <fieldset className='w-11/12 place-contents-center'>
 
-                        {/* <label htmlFor='job_title' className='inline-grid content-center text-white mx-4 my-2'>Job Title</label> */}
                         <h3 className='text-white p-1'>Job Title</h3>
                         <input type='text' name='job_title' id='job_title' className='content-center mx-2 my-2 w-6/12 p-0.5' placeholder='ex: Software Developer' />
 
-                        {/* <label htmlFor='company' className='inline-grid content-center text-white mx-4 my-2'>Company</label> */}
                         <h3 className='text-white p-1'>Company</h3>
                         <input type='text' name='company' id='company' className='content-center mx-2 my-2 w-6/12 p-0.5' placeholder='ex: Code Fellows' />
 
-                        {/* <label htmlFor='date_applied' className='inline-grid content-center text-white mx-4 my-2'>Date Applied</label> */}
-                        {/* <input type='text' name='date_applied' id='date_applied' className='content-center mx-2 my-2 w-6/12' /> */}
+
                         <h3 className='text-white p-1'>Date Applied</h3>
                         <DatePicker name='date_applied' id='date_applied' showIcon selected={startDate} onChange={(date) => setStartDate(date)} className="pl-2"/>
-{/* 
-                        <label htmlFor='notes' className='inline-grid content-center text-white mx-4 my-2'>Notes</label> */}
+
                         <h3 className='text-white p-1'>Notes</h3>
                         <input type='text' name='notes' id='notes' className='content-center mx-2 my-2 w-6/12 p-0.5' placeholder='Optional' />
-{/* 
-                        <label htmlFor='method_of_applications' className='inline-grid content-center text-white mx-4 my-2'>How Did You Apply?</label> */}
+
                         <h3 className='text-white p-1'>How did you apply?</h3>
                         <select name='method_of_applications' id='method_of_applications' className='content-center mx-2 my-2 w-6/12 p-0.5'>
                             {/* <option selected value='choose'>Choose a method</option> */}
@@ -73,7 +68,6 @@ export default function CreateJobForm() {
                             <option value="other">Other</option>
                         </select>
 
-                        {/* <label htmlFor='referrals' className='inline-grid content-center text-white mx-4 my-2'>Referral?</label> */}
                         <h3 className='text-white'>Referral</h3>
                         <input type='text' name='referrals' id='referrals' className='content-center mx-2 my-2 w-6/12 p-0.5' placeholder='ex: Code Fellows' />
 
