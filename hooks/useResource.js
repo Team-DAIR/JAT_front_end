@@ -42,6 +42,7 @@ export default function useResource() {
         }
     }
 
+
     async function deleteResource(id) {
 
         try {
@@ -56,17 +57,7 @@ export default function useResource() {
     }
 
 
-    async function getResource(info) {
-        try {
-            const url = apiUrl;
-            const options = config();
-            options.method = "GET";
-            await fetch(url, options);
-            mutate(); // mutate causes complete collection to be refetched
-        } catch (err) {
-            handleError(err);
-        }
-    }
+    
 
 
     async function updateResource(info, id) {
@@ -108,9 +99,7 @@ export default function useResource() {
         loading: tokens && !error && !data,
         createResource,
         deleteResource,
-        updateResource,
-        getResource,
-        
+        updateResource,        
     };
 }
 
