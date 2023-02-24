@@ -12,7 +12,7 @@ export default function AboutPage() {
                 </title>
             </Head>
             <NavBar />
-            <About/>
+            <About />
             <Footer />
         </>
     )
