@@ -7,7 +7,8 @@ const data = {
     labels: [
         'Indeed',
         'Company Site',
-        'LinkedIn'
+        'LinkedIn',
+    
     ],
     datasets: [{
         data: [300, 50, 100],
