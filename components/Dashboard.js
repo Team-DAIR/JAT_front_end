@@ -41,8 +41,9 @@ export default function Dashboard() {
         className=''
           options={{ maintainAspectRatio: true}} />
       </div>
-
       <Footer />
-    </div>
+
+      </>
+
   )
 }
