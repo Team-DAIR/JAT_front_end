@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 
 export default function AboutPage() {
     return(
-        <>
+        <div className='relative min-h-screen'>
             <Head>
                 <title>
                     About
@@ -14,6 +14,6 @@ export default function AboutPage() {
             <NavBar />
             <About/>
             <Footer />
-        </>
+        </div>
     )
 }

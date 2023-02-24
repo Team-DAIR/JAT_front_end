@@ -55,10 +55,32 @@ export default function useResource() {
         }
     }
 
-    async function updateResource(resource) {
-        // STRETCH
-        // Add ability for user to update an existing resource
+
+    async function getResource(info) {
+        try {
+            const url = apiUrl;
+            const options = config();
+            options.method = "GET";
+            await fetch(url, options);
+            mutate(); // mutate causes complete collection to be refetched
+        } catch (err) {
+            handleError(err);
+        }
     }
+
+
+    async function updateResource(info, id) {
+        try {
+            const url = apiUrl + id;
+            const options = config();
+            options.method = "PUT";
+            await fetch(url, options);
+            mutate(); // mutate causes complete collection to be refetched
+        } catch (err) {
+            handleError(err);
+        }
+    }
+    
 
 
     // helper function to handle getting Authorization headers EXACTLY right
@@ -87,5 +109,8 @@ export default function useResource() {
         createResource,
         deleteResource,
         updateResource,
+        getResource,
+        
     };
 }
+

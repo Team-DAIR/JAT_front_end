@@ -7,6 +7,11 @@ export default function NavBar() {
   const { logout } = useAuth();
   const router = useRouter()
 
+  function handleLogout(){
+    logout();
+    router.push('/')
+  }
+  
   return (
     <nav className='top-0 w-screen flex items-center flex-wrap bg-blue-900 p-3 '>
 
@@ -42,7 +47,7 @@ export default function NavBar() {
 
         </Link>
 
-        <button className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-green-600 hover:text-white' onClick={logout}>Logout</button>
+        <button className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-green-600 hover:text-white' onClick={handleLogout}>Logout</button>
 
       </div>
     </nav>
