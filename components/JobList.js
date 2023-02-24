@@ -1,47 +1,28 @@
 import React, { useState } from 'react';
-import AccordionUI from './AccordionUI';
+import AccordionItem from './AccordionItem';
+import useResource from '../hooks/useResource';
 
 export default function JobList() {
 
+  const { resources } = useResource();
   const [Index, setIndex] = useState(false);
 
-  const info = [
-    {
-      id: 1,
-      title: 'Job Title 1 at Company A',
-      details: 'Job 1 Details',
-    },
-    {
-      id: 2,
-      title: 'Job Title 2 at Company B',
-      details: 'Job 2 Details',
-    },
-    {
-      id: 3,
-      title: 'Job Title 3 at Company C',
-      details: 'Job 3 Details',
-    },
-  ];
-  
   return (
-    <div className='flex m-auto flex-col justify-center items-center m-auto p-10 rounded-xl h-auto py-20 bg-slate-200 w-5/6' >
+    <div className='flex m-auto flex-col justify-center items-center p-10 rounded-xl h-auto py-20 bg-slate-200 w-5/6' >
       {
-        info.map((info) => {
+        resources.map((job) => {
           return (
-            <AccordionUI 
-              title={info.title}
-              Id={info.id}
-              details={info.details}
+            <AccordionItem
+              title={`${job.job_title} at ${job.company}`}
+              Id={job.id}
+              details={job.company}
               Index={Index}
               setIndex={setIndex}
-              >
-              
-            </AccordionUI>
+            >
+            </AccordionItem>
           )
         })
       }
-      
-
     </div>
   )
 }

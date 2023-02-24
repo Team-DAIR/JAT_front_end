@@ -1,7 +1,7 @@
 import React from "react";
 import {HiArrowCircleDown,HiX} from 'react-icons/hi';
 
-const AccordionUI = ({title, details, Id, Index, setIndex}) => {
+const AccordionItem = ({title, details, Id, Index, setIndex}) => {
 
   const handleSetIndex = (Id) => Index !== Id && setIndex(Id);
 
@@ -28,4 +28,4 @@ const AccordionUI = ({title, details, Id, Index, setIndex}) => {
   )
 }
 
-export default AccordionUI;
+export default AccordionItem;

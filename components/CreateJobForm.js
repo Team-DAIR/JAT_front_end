@@ -37,6 +37,7 @@ export default function CreateJobForm() {
             owner: user.id,
         };
         createResource(info);
+        console.log(info)
 
     }
 
