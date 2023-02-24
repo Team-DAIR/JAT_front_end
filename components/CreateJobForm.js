@@ -20,7 +20,7 @@ export default function CreateJobForm() {
         const parsedDateArr = originalDate.split('/');
         const parsedDate = `${parsedDateArr[2]}-${parsedDateArr[0]}-${parsedDateArr[1]}`;
 
-        router.push('/dashboard')
+        router.push('/dash')
 
         const info = {
             company: event.target.company.value,
