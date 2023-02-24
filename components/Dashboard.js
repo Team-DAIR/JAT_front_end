@@ -39,7 +39,7 @@ export default function Dashboard() {
           </div>
         </header>
         <div className='items-center flex flex-col align-center '>
-          <JobList deleteJob={deleteResource}/>
+          <JobList onDelete={deleteResource}/>
         </div>
         <div className='mt-2 items-center flex flex-col align-center  '>
           <Doughnut

@@ -1,15 +1,9 @@
 import React from "react";
-import { HiArrowCircleDown, HiX } from 'react-icons/hi';
+import { HiArrowCircleDown, HiX, HiTrash } from 'react-icons/hi';
 
-export default function AccordionItem ({ title, date_applied, notes, method_of_applications, referrals, first, second, third, rejected, offer, Id, Index, setIndex, deleteJob, job }) {
+export default function AccordionItem ({ title, date_applied, notes, method_of_applications, referrals, first, second, third, rejected, offer, Id, Index, setIndex, onDelete }) {
 
   const handleSetIndex = (Id) => Index !== Id && setIndex(Id);
-
-  function handleDelete() {
-    deleteJob=(job.id);
-    console.log('handleDelete has been called')
-    console.log(job.id)
-  }
 
   return (
     <>
@@ -21,7 +15,19 @@ export default function AccordionItem ({ title, date_applied, notes, method_of_a
         </div>
         <div className="flex items-center justify-center pr-10">
           {
-            Index != Id ? (<HiArrowCircleDown className="w-6 h-6 group-hover:text-white text-slate-800" />) : (<HiX className="w-6 h-6 group-hover:text-white text-slate-800" />)
+            Index != Id
+            ?
+            (<HiArrowCircleDown className="w-6 h-6 group-hover:text-white text-slate-800" />)
+            :
+            (
+            <div className="flex items-center">
+              <HiX className="w-6 h-6 group-hover:text-white text-slate-800" />
+              <HiTrash
+                className="w-6 h-6 group-hover:text-white text-slate-800"
+                onClick={() => onDelete(Id)}
+              />
+            </div>
+            )
           }
         </div>
       </div>
@@ -84,7 +90,7 @@ export default function AccordionItem ({ title, date_applied, notes, method_of_a
             :
             ''
           }
-          <button onClick={handleDelete}>Delete</button>
+          {/* <button onClick={handleDelete}>Delete</button> */}
           
         </div>
       )}

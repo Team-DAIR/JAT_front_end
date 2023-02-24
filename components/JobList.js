@@ -2,17 +2,23 @@ import React, { useState } from 'react';
 import AccordionItem from './AccordionItem';
 import useResource from '../hooks/useResource';
 
-export default function JobList({ deleteJob }) {
+export default function JobList() {
 
   const { resources } = useResource();
   const [Index, setIndex] = useState(false);
+  const [resourcesState, setResourcesState] = useState(resources);
 
-  console.log(deleteJob)
+  function onDelete(id) {
+    const updatedResources = resourcesState.filter(resource => resource.id !== id);
+    setResourcesState(updatedResources);
+  }
+
+  // console.log(deleteJob)
 
   return (
     <div className='flex m-auto flex-col justify-center items-center p-10 rounded-xl h-auto py-20 bg-slate-200 w-5/6' >
       {
-        resources.map((job) => {
+        resourcesState.map((job) => {
           return (
             <AccordionItem
               title={`${job.job_title} at ${job.company}`}
@@ -29,7 +35,7 @@ export default function JobList({ deleteJob }) {
               offer={job.offer}
               Index={Index}
               setIndex={setIndex}
-              deleteJob={deleteJob}
+              onDelete={onDelete}
               job={job}
             >
             </AccordionItem>
