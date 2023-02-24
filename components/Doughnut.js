@@ -5,9 +5,9 @@ import { Doughnut } from 'react-chartjs-2';
 
 const data = {
     labels: [
-        'Red',
-        'Green',
-        'Yellow'
+        'Indeed',
+        'Company Site',
+        'LinkedIn'
     ],
     datasets: [{
         data: [300, 50, 100],
@@ -25,6 +25,8 @@ const data = {
 };
 
 export default () => (
+    <>
+        <h1 className='text-white pb-11 font-mono text-2xl'>Your Application Stats</h1>
     <div className='flex w-1/3 mt-2'>
         <Doughnut
             data={data}
@@ -32,4 +34,5 @@ export default () => (
             max-height={100}
         />
     </div>
+    </>
 );
