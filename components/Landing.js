@@ -28,8 +28,9 @@ export default function Landing() {
               <div className="flex flex-col sm:flex-row items-center">
                 <div className="flex justify-start w-full mx-auto items-center">
                   <div className="w-full sm:w-1/2 sm:pr-8">
-                    <div className="p-4 bg-white rounded shadow">
-                      Now this is a story all about how,
+                    <div className="p-4 bg-white rounded shadow italic font-light">
+                      "I love how easy and simple this site makes it to track jobs I have applied to. It has everything I need and more to show my job search progress. Thanks JAT!!!" 
+                      -user98753
                     </div>
                   </div>
                 </div>
@@ -43,8 +44,8 @@ export default function Landing() {
               <div className="flex flex-col sm:flex-row items-center">
                 <div className="flex justify-end w-full mx-auto items-center">
                   <div className="w-full sm:w-1/2 sm:pl-8">
-                    <div className="p-4 bg-white rounded shadow">
-                      My life got flipped turned upside down,
+                    <div className="p-4 bg-white rounded shadow italic font-light">
+                      "I love coming to this site and getting motivated to find a job. JAT makes it SO easy to stay organized and motivated no matter what!" -anonymous
                     </div>
                   </div>
                 </div>
@@ -59,8 +60,8 @@ export default function Landing() {
               <div className="flex flex-col sm:flex-row items-center">
                 <div className="flex justify-start w-full mx-auto items-center">
                   <div className="w-full sm:w-1/2 sm:pr-8">
-                    <div className="p-4 bg-white rounded shadow">
-                      And I'd like to take a minute, just sit right there,
+                    <div className="p-4 bg-white rounded shadow italic font-light">
+                      "I'm a big fan of keeping things neat and organized, and using this site is just so much easier and more fun than using a plain old spreadsheet. Just JAT It Down!" -JobZaddy1988
                     </div>
                   </div>
                 </div>
@@ -75,8 +76,8 @@ export default function Landing() {
               <div className="flex flex-col sm:flex-row items-center">
                 <div className="flex justify-end w-full mx-auto items-center">
                   <div className="w-full sm:w-1/2 sm:pl-8">
-                    <div className="p-4 bg-white rounded shadow">
-                      "I'll tell you how I became the Prince of a town called Bel Air. blah blah blah lkjsdfl;jaoefjalknsdvln lkdfj ;akjn dfj alkdjs fklaj;s; ;lkj klajsdhfkkjh ferihjn aubtrh j"
+                    <div className="p-4 bg-white rounded shadow italic font-light">
+                      "I love the donut stats that tell you what site you apply most with! It reminds me to visit other sites and look there as well." -bowzer8
                     </div>
                   </div>
                 </div>
