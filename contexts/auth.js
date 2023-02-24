@@ -1,5 +1,6 @@
 import { createContext, useContext, useState } from 'react';
 import jwt from 'jsonwebtoken';
+import { LogarithmicScale } from 'chart.js';
 const baseUrl = process.env.NEXT_PUBLIC_API_URL;
 const tokenUrl = baseUrl + '/api/token/';
 
@@ -21,6 +22,7 @@ export function AuthProvider(props) {
         login,
         logout,
     });
+    
 
     async function login(username, password) {
 
@@ -35,7 +37,6 @@ export function AuthProvider(props) {
         const response = await fetch(tokenUrl, options);
 
         const data = await response.json();
-
         const decodedAccess = jwt.decode(data.access);
 
         const newState = {
@@ -55,6 +56,7 @@ export function AuthProvider(props) {
             tokens: null,
             user: null,
         };
+        console.log("user is logged out")
         setState(prevState => ({ ...prevState, ...newState }));
     }
 
