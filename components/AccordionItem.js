@@ -1,7 +1,7 @@
 import React from "react";
-import {HiArrowCircleDown,HiX} from 'react-icons/hi';
+import { HiArrowCircleDown, HiX, HiTrash } from 'react-icons/hi';
 
-const AccordionItem = ({title, details, Id, Index, setIndex}) => {
+export default function AccordionItem ({ title, date_applied, notes, method_of_applications, referrals, first, second, third, rejected, offer, Id, Index, setIndex, onDelete }) {
 
   const handleSetIndex = (Id) => Index !== Id && setIndex(Id);
 
@@ -15,17 +15,87 @@ const AccordionItem = ({title, details, Id, Index, setIndex}) => {
         </div>
         <div className="flex items-center justify-center pr-10">
           {
-            Index != Id ? (<HiArrowCircleDown className="w-6 h-6 group-hover:text-white text-slate-800"/>) : (<HiX className="w-6 h-6 group-hover:text-white text-slate-800"/>)
+            Index != Id
+            ?
+            (<HiArrowCircleDown className="w-6 h-6 group-hover:text-white text-slate-800" />)
+            :
+            (
+            <div className="flex items-center">
+              <HiX className="w-6 h-6 group-hover:text-white text-slate-800" />
+              <HiTrash
+                className="w-6 h-6 group-hover:text-white text-slate-800"
+                onClick={() => onDelete(Id)}
+              />
+            </div>
+            )
           }
         </div>
       </div>
       {Index === Id && (
-        <div className="bg-slate-100 px-10 font-semibold text-slate-800 w-3/4 h-auto rounded-md border-1 border-blue-300 mb-2 py-4">
-          {details}
+        <div>
+          <div className="bg-slate-100 px-10 font-semibold text-slate-800 w-3/4 h-auto rounded-md border-1 border-blue-300 mb-2 py-4">
+            Date Applied: {date_applied}
+          </div>
+          <div className="bg-slate-100 px-10 font-semibold text-slate-800 w-3/4 h-auto rounded-md border-1 border-blue-300 mb-2 py-4">
+            Notes: {notes}
+          </div>
+          <div className="bg-slate-100 px-10 font-semibold text-slate-800 w-3/4 h-auto rounded-md border-1 border-blue-300 mb-2 py-4">
+            Method of Application: {method_of_applications}
+          </div>
+          <div className="bg-slate-100 px-10 font-semibold text-slate-800 w-3/4 h-auto rounded-md border-1 border-blue-300 mb-2 py-4">
+            Referral? {referrals}
+          </div>
+          {
+            first
+            ? 
+            <div className="bg-slate-100 px-10 font-semibold text-slate-800 w-3/4 h-auto rounded-md border-1 border-blue-300 mb-2 py-4">
+            First Interview: &#x2713;
+            </div>
+            :
+            ''
+          }
+          {
+            second
+            ? 
+            <div className="bg-slate-100 px-10 font-semibold text-slate-800 w-3/4 h-auto rounded-md border-1 border-blue-300 mb-2 py-4">
+            Second Interview: &#x2713;
+            </div>
+            :
+            ''
+          }
+          {
+            third
+            ? 
+            <div className="bg-slate-100 px-10 font-semibold text-slate-800 w-3/4 h-auto rounded-md border-1 border-blue-300 mb-2 py-4">
+            Third Interview: &#x2713;
+            </div>
+            :
+            ''
+          }
+          {
+            rejected
+            ? 
+            <div className="bg-slate-100 px-10 font-semibold text-slate-800 w-3/4 h-auto rounded-md border-1 border-blue-300 mb-2 py-4">
+            Rejected: &#128546;
+            </div>
+            :
+            ''
+          }
+          {
+            offer
+            ? 
+            <div className="bg-slate-100 px-10 font-semibold text-slate-800 w-3/4 h-auto rounded-md border-1 border-blue-300 mb-2 py-4">
+            Offer Received! &#129321;
+            </div>
+            :
+            ''
+          }
+          {/* <button onClick={handleDelete}>Delete</button> */}
+          
         </div>
       )}
     </>
   )
 }
 
-export default AccordionItem;
+// export default AccordionItem;

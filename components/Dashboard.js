@@ -1,3 +1,4 @@
+import useResource from "@/hooks/useResource"
 import Image from "next/image"
 import Doughnut from "./Doughnut"
 import Footer from "./Footer"
@@ -5,6 +6,9 @@ import JobList from "./JobList"
 import NavBar from "./NavBar"
 
 export default function Dashboard() {
+
+  const { deleteResource } = useResource();
+
   return (
     <>
       <div className='relative min-h-screen '>
@@ -35,7 +39,7 @@ export default function Dashboard() {
           </div>
         </header>
         <div className='items-center flex flex-col align-center '>
-          <JobList />
+          <JobList onDelete={deleteResource}/>
         </div>
         <div className='mt-2 items-center flex flex-col align-center  '>
           <Doughnut
