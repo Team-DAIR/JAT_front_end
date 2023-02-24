@@ -5,7 +5,7 @@ import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
 
 const Video = () => (
-  <div className="max-w-xl p-4 place-self-center">
+  <div className="grow p-32 flex-col">
       <LiteYouTubeEmbed
           id="KObiuTFYTkM"
           activeClass="lyt-activated" // Default as "lyt-activated", gives control to wrapper once clicked
@@ -20,9 +20,21 @@ const Video = () => (
 export default function AddJob() {
   return (
     <>
-      <NavBar />
+      <div className="bg-black">
+        
+                <div
+                className=" bg-no-repeat bg-cover"
+                style={{
+                  backgroundImage: `url('https://images.unsplash.com/photo-1533134486753-c833f0ed4866?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')`,
+                  height: "650px",
+                  width: "100%",
+                }}
+            >
+                <NavBar />
       <CreateJobForm />
+      </div>
       <Video />
+        </div>        
     </>
   )
 }
