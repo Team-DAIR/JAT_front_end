@@ -28,7 +28,7 @@ export default function Dashboard() {
             width: "100%",
           }}
         >
-          <h1 className='flex p-4 bg-black text-white font-mono mb-32'> DASHBOARD</h1>
+          <h1 className='p-32 text-center text-white text-3xl font-mono tracking-wider'> DASHBOARD</h1>
 
           
         </div>
@@ -41,8 +41,7 @@ export default function Dashboard() {
         className=''
           options={{ maintainAspectRatio: true}} />
       </div>
-
       <Footer />
-    </>
+      </>
   )
 }
