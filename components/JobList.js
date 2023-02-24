@@ -18,7 +18,7 @@ export default function JobList() {
   return (
     <div className='flex m-auto flex-col justify-center items-center p-10 rounded-xl h-auto py-20 bg-slate-200 w-5/6' >
       {
-        resourcesState.map((job) => {
+        resourcesState && resourcesState.map((job) => {
           return (
             <AccordionItem
               title={`${job.job_title} at ${job.company}`}
